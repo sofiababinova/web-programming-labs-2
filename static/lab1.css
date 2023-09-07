@@ -1,0 +1,86 @@
+#dyb {
+    background-color: lightgreen;
+    color: green;
+    text-align: center;
+}
+
+#oak {
+    height: 500px;
+    width: 700px;
+    position: absolute;
+    left: 400px;
+}
+
+#nstu {
+    height: 600px;
+    width: 600px;
+    position: absolute;
+    left: 470px;
+}
+
+#student {
+    background-color: lightpink;
+    color: deeppink;
+    text-align: center;
+}
+
+#prog {
+    background-color: lightseagreen;
+    color: darkblue;
+    text-align: justify;
+    font-weight: bolder;
+}
+
+#python {
+    height: 500px;
+    width: 700px;
+    position: absolute;
+    left: 470px;
+}
+
+#vyz {
+    background-color: rgb(215, 112, 91);
+    color: rgb(139, 0, 0);
+    text-align: justify;
+    font-weight: bolder;
+    font-size: large;
+}
+
+#ynik {
+    height: 500px;
+    width: 900px;
+    position: absolute;
+    left: 370px;
+}
+
+#zagolovok {
+    text-align: center;
+}
+
+header {
+    background-color: pink; 
+    color: rgb(216, 43, 101); 
+    padding: 15px; 
+    font-size: 16pt;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 98%;
+}
+
+footer {
+    background-color: pink; 
+    color: rgb(216, 43, 101); 
+    padding: 15px;
+    font-size: 13pt; 
+    font-style: italic; 
+    text-align: right;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    width: 98%;
+}
+
+#pusto {
+    height: 50px;
+}

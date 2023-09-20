@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if tit_name %}Софья Бабинова{% endif %}. Лабораторная 2</title>
+    <title>{% if name %}Софья Бабинова{% endif %}. Лабораторная 2</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
 </head>
 <body>
@@ -15,9 +15,15 @@
         <div id="pusto"></div>
 
         5 + 2 = {{ 5 + 2 }}<br>
-        11 * 28 = {{ 11 * 28 }}<br>
+        11 x 28 = {{ 11 * 28 }}<br>
         8452 / 793 = {{ 8452 / 793 }}<br>
-        45 ** 8 = {{ 45 ** 8 }}<br>
+        45<sup>8</sup> = {{ 45 ** 8 }}<br>
+
+        <ul>
+            {% for f in fruits %}
+            <li>{{ f.name }}: {{ f.price }} &#x20bd;</li>
+            {% endfor %}
+        </ul>
     </main>
 
     <footer>

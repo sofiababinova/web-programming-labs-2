@@ -1,0 +1,36 @@
+main {
+    margin: 0;
+}
+
+body {
+    margin-bottom: 40px;
+    padding: 10px;
+}
+
+header {
+    background-color: pink; 
+    color: rgb(216, 43, 101); 
+    padding: 15px; 
+    font-size: 16pt;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 98%;
+}
+
+footer {
+    background-color: pink; 
+    color: rgb(216, 43, 101); 
+    padding: 15px;
+    font-size: 13pt; 
+    font-style: italic; 
+    text-align: right;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    width: 98%;
+}
+
+#pusto {
+    height: 50px;
+}

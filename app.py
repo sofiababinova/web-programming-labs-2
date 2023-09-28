@@ -215,3 +215,7 @@ def example():
         {'book': 'Убить пересмешника', 'author': 'Харпер Ли', 'genre': 'Роман', 'pages': 416}
     ]
     return render_template ('example.html', name=name, group=group, course=course, lab_num=lab_num, fruits=fruits, books=books)
+
+@app.route('/lab2/')
+def lab2():
+    return render_template('lab2.html')

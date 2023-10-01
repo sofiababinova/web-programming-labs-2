@@ -85,3 +85,29 @@ footer {
     font-weight: bolder;
     font-size: large;
 }
+
+#menu1 {
+    background-color: lightcoral;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px lightcoral;
+    width: 90px;
+    height: 25px;
+    font-weight: bold;
+}
+
+a.menu2 {
+    font-size: 15pt;
+    color: brown;
+    text-decoration: none;
+    transition: 500ms 0.01s;
+    padding: 30px 50px 30px 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+a.menu2:hover {
+    font-size: 15pt;
+    font-weight: bold;
+    color: pink;
+}

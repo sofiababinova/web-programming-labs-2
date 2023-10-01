@@ -34,3 +34,54 @@ footer {
 #pusto {
     height: 50px;
 }
+
+#pusto2 {
+    height: 20px;
+}
+
+#zagolovok {
+    text-align: center;
+}
+
+#berries {
+    height: 500px;
+    width: 700px;
+    position: relative;
+    left: 400px;
+}
+
+#fruits {
+    height: 500px;
+    width: 700px;
+    position: relative;
+    left: 400px;
+}
+
+#furniture {
+    height: 500px;
+    width: 700px;
+    position: relative;
+    left: 400px;
+}
+
+#cars {
+    height: 500px;
+    width: 700px;
+    position: relative;
+    left: 400px;
+}
+
+#flowers {
+    height: 700px;
+    width: 700px;
+    position: relative;
+    left: 400px;
+}
+
+#like {
+    background-color: lavenderblush;
+    color: salmon;
+    text-align: justify;
+    font-weight: bolder;
+    font-size: large;
+}

@@ -111,3 +111,13 @@ a.menu2:hover {
     font-weight: bold;
     color: pink;
 }
+
+.errors {
+    color: red;
+    font-weight: bold;
+}
+
+#drinks {
+    background-color: rgb(252, 239, 174);
+    color: rgb(126, 16, 6);
+}

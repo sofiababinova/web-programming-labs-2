@@ -46,3 +46,43 @@ def pay():
 @lab3.route('/lab3/succes')
 def succes():
     return render_template('succes.html')
+
+@lab3.route('/lab3/ticket')
+def ticket():
+    errors = {}
+    surname = request.args.get('surname')
+    if surname == '':
+        errors['surname'] = 'Заполните поле!'
+
+    name = request.args.get('name')
+    if name == '':
+        errors['name'] = 'Заполните поле!'
+
+    middlename = request.args.get('middlename')
+    if middlename == '':
+        errors['middlename'] = 'Заполните поле!'
+
+    age = request.args.get('age')
+    if not age:
+        errors['age'] = 'Заполните поле!'
+    else:
+        age = int(age)
+        if age < 18 or age > 120:
+            errors['age'] = 'Недопустимый возраст!'
+
+    wherefrom = request.args.get('wherefrom')
+    if wherefrom == '':
+        errors['wherefrom'] = 'Заполните поле!'
+
+    where = request.args.get('where')
+    if where == '':
+        errors['where'] = 'Заполните поле!'
+
+    date = request.args.get('date')
+    if date == '':
+        errors['date'] = 'Заполните поле!'
+
+    tickettype = request.args.get('tickettype')
+    shelf = request.args.get('shelf')
+    luggage = request.args.get('luggage')
+    return render_template('ticket.html', surname=surname, name=name, middlename=middlename, age=age, wherefrom=wherefrom, where=where, date=date, errors=errors, tickettype=tickettype, shelf=shelf, luggage=luggage)

@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+{% block lab %}Лабораторная работа 3{% endblock %}
+
+{% block main %}
+
+    {% if surname and name and middlename and tickettype and not errors.age and wherefrom and where and shelf and luggage %}
+
+    <h1>Железнодорожный билет</h1>
+    <h2>ФИО пассажира: {{ surname }} {{ name }} {{ middlename }}</h2>
+    <h2>Тип билета: {{ 'Детский' if tickettype == 'child' else 'Взрослый' }}</h2>
+    <h2>Возраст: {{ age }}</h2>
+    <h2>Маршрут: {{ wherefrom }} - {{ where }}</h2>
+    <h2>Дата поездки: {{ date }}</h2>
+    <h2>Полка: {% if shelf == 'lower' %}Нижняя{% elif shelf == 'upper' %}Верхняя{% elif shelf == 'lowerside' %}Нижняя боковая{% else %}Верхняя боковая{% endif %}</h2>
+    <h2>Багаж: {{ 'С багажом' if luggage == 'withluggage' else 'Без багажа' }}</h2>
+
+    {% else %}
+
+    <h1>Железнодорожный билет</h1>
+
+    <form>
+        <h3>ФИО пассажира</h3>
+        <label>
+            <input type="text" placeholder="Фамилия" name="surname" value="{{ surname or '' }}">
+            <span class='errors'>{{ errors.surname }}</span>
+        </label><br><br>
+        <label>
+            <input type="text" placeholder="Имя" name="name" value="{{ name or '' }}">
+            <span class='errors'>{{ errors.name }}</span>
+        </label><br><br>
+        <label>
+            <input type="text" placeholder="Отчество" name="middlename" value="{{ middlename or '' }}">
+            <span class='errors'>{{ errors.middlename }}</span>
+        </label><br><br>
+
+        <h3>Тип билета</h3>
+        <select name="tickettype">
+            <option value="child" {{ sex == 'child' and 'selected' }}>Детский</option>
+            <option value="adult" {{ sex == 'adult' and 'selected' }}>Взрослый</option>
+        </select><br><br>
+        <!-- <label>
+            <input type="radio" value="child" name="tickettype" checked {{ tickettype == 'child' and 'selected' }}>Детский
+        </label><br><br>
+        <label>
+            <input type="radio" value="adult" name="tickettype" checked {{ tickettype == 'child' and 'adult' }}>Взрослый
+        </label><br><br> -->
+
+        <h3>Возраст</h3>
+        <label>
+            <input type="number" placeholder="Ваш возраст" name="age" value="{{ age or '' }}">
+            <span class='errors'>{{ errors.age }}</span>
+        </label>
+
+        <h3>Пункт выезда</h3>
+        <label>
+            <input type="text" placeholder="Откуда" name="wherefrom" value="{{ wherefrom or '' }}">
+            <span class='errors'>{{ errors.wherefrom }}</span>
+        </label><br><br>
+
+        <h3>Пункт назначения</h3>
+        <label>
+            <input type="text" placeholder="Куда" name="where" value="{{ where or '' }}">
+            <span class='errors'>{{ errors.where }}</span>
+        </label><br><br>
+
+        <h3>Дата поедки</h3>
+        <label>
+            <input type="date" placeholder="dd-mm-yyyy" name="date" value="{{ date or '' }}">
+            <span class='errors'>{{ errors.date }}</span>
+        </label>
+
+        <h3>Полка</h3>
+        <select name="shelf">
+            <option value="lower" {{ sex == 'lower' and 'selected' }}>Нижняя</option>
+            <option value="upper" {{ sex == 'upper' and 'selected' }}>Верхняя</option>
+            <option value="lowerside" {{ sex == 'lowerside' and 'selected' }}>Нижняя боковая</option>
+            <option value="upperside" {{ sex == 'upperside' and 'selected' }}>Верхняя боковая</option>
+        </select><br><br>
+        <!-- <label>
+            <input type="radio" value="lower" name="shelf" checked>Нижняя
+        </label><br><br>
+        <label>
+            <input type="radio" value="upper" name="shelf" checked>Верхняя
+        </label><br><br>
+        <label>
+            <input type="radio" value="lowerside" name="shelf" checked>Нижняя боковая
+        </label><br><br>
+        <label>
+            <input type="radio" value="upperside" name="shelf" checked>Верхняя боковая
+        </label><br><br> -->
+
+        <h3>Багаж</h3>
+        <select name="luggage">
+            <option value="withluggage" {{ sex == 'withluggage' and 'selected' }}>С багажом</option>
+            <option value="withoutluggage" {{ sex == 'withoutluggage' and 'selected' }}>Без багажа</option>
+        </select><br><br>
+        <!-- <label>
+            <input type="radio" value="withluggage" name="luggage" checked {{ luggage == 'withluggage' and 'selected' }}>С багажом
+        </label><br><br>
+        <label>
+            <input type="radio" value="withoutluggage" name="luggage" checked {{ luggage == 'withoutluggage' and 'selected' }}>Без багажа
+        </label><br><br> -->
+
+        <div>
+            <button type="submit">Оформить билет</button>
+        </div>
+    </form><br>
+
+    {% endif %}
+
+{% endblock %}

@@ -47,6 +47,7 @@ def pay():
 def succes():
     return render_template('succes.html')
 
+
 @lab3.route('/lab3/ticket')
 def ticket():
     errors = {}

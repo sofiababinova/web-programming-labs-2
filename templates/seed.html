@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block lab %}Лабораторная работа 4{% endblock %}
+
+{% block main %}
+
+    {% if seed and not errors.weight and price%}
+
+    <h1>Заказ успешно сформирован!</h1>
+    <h2>Вы заказали {% if seed == 'barley' %}Ячмень
+        {% elif seed == 'oats' %}Овёс
+        {% elif seed == 'wheat' %}Пшеница
+        {% else %}Рожь{% endif %}. 
+    </h2>
+    <h2>
+        Вес: {{ weight }} т.
+    </h2>
+    <h2>
+        Сумма к оплате: {{ price }} руб. {{skidka }}
+    </h2><br>
+
+    <div>
+        <a href="/lab4/seed">Заказ зерна</a>
+    </div>
+
+    {% else %}
+
+    <h1>Заказ зерна</h1>
+    <form method="POST">
+        <div>Зерно:</div>
+        <select name="seed">
+            <option value="barley" {{ seed == 'barley' and 'selected' }}>Ячмень</option>
+            <option value="oats" {{ seed == 'oats' and 'selected' }}>Овёс</option>
+            <option value="wheat" {{ seed == 'wheat' and 'selected' }}>Пшеница</option>
+            <option value="rye" {{ seed == 'rye' and 'selected' }}>Рожь</option>
+        </select><br><br>
+        <div>
+            <label for="weight">Введите вес (т):</label><br>
+            <input type="number" id="weight" name="weight" value="{{ weight or '' }}">
+            <span class='errors'>{{ errors.weight }}</span>
+        </div><br>
+        <div>
+            <button type="submit">Оформить заказ</button>
+        </div>
+    </form>
+
+    {% endif %}
+
+{% endblock %}

@@ -36,8 +36,8 @@
 
         <h3>Тип билета</h3>
         <select name="tickettype">
-            <option value="child" {{ sex == 'child' and 'selected' }}>Детский</option>
-            <option value="adult" {{ sex == 'adult' and 'selected' }}>Взрослый</option>
+            <option value="child" {{ tickettype == 'child' and 'selected' }}>Детский</option>
+            <option value="adult" {{ tickettype == 'adult' and 'selected' }}>Взрослый</option>
         </select><br><br>
         <!-- <label>
             <input type="radio" value="child" name="tickettype" checked {{ tickettype == 'child' and 'selected' }}>Детский
@@ -72,10 +72,10 @@
 
         <h3>Полка</h3>
         <select name="shelf">
-            <option value="lower" {{ sex == 'lower' and 'selected' }}>Нижняя</option>
-            <option value="upper" {{ sex == 'upper' and 'selected' }}>Верхняя</option>
-            <option value="lowerside" {{ sex == 'lowerside' and 'selected' }}>Нижняя боковая</option>
-            <option value="upperside" {{ sex == 'upperside' and 'selected' }}>Верхняя боковая</option>
+            <option value="lower" {{ shelf == 'lower' and 'selected' }}>Нижняя</option>
+            <option value="upper" {{ shelf == 'upper' and 'selected' }}>Верхняя</option>
+            <option value="lowerside" {{ shelf == 'lowerside' and 'selected' }}>Нижняя боковая</option>
+            <option value="upperside" {{ shelf == 'upperside' and 'selected' }}>Верхняя боковая</option>
         </select><br><br>
         <!-- <label>
             <input type="radio" value="lower" name="shelf" checked>Нижняя
@@ -92,8 +92,8 @@
 
         <h3>Багаж</h3>
         <select name="luggage">
-            <option value="withluggage" {{ sex == 'withluggage' and 'selected' }}>С багажом</option>
-            <option value="withoutluggage" {{ sex == 'withoutluggage' and 'selected' }}>Без багажа</option>
+            <option value="withluggage" {{ luggage == 'withluggage' and 'selected' }}>С багажом</option>
+            <option value="withoutluggage" {{ luggage == 'withoutluggage' and 'selected' }}>Без багажа</option>
         </select><br><br>
         <!-- <label>
             <input type="radio" value="withluggage" name="luggage" checked {{ luggage == 'withluggage' and 'selected' }}>С багажом

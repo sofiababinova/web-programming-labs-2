@@ -7,8 +7,8 @@
     <form method="POST">
         <div>
             <label for="temp">Введите температуру:</label>
-            <input type="temp" id="temp" name="temp" value="{{ temp or '' }}">
-        </div>
+            <input type="number" id="temp" name="temp" value="{{ temp or '' }}">
+        </div><br>
         <div>
             <button type="submit">Установить температуру</button>
         </div>

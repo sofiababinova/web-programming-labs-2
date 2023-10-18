@@ -1,4 +1,3 @@
-from xml.dom.expatbuilder import DOCUMENT_NODE
 from flask import Blueprint, render_template, request
 lab4 = Blueprint('lab4', __name__)
 
@@ -35,3 +34,33 @@ def login():
 @lab4.route('/lab4/success')
 def success():
     return render_template('success.html')
+
+
+@lab4.route('/lab4/fridge', methods = ['GET', 'POST'])
+def fridge():
+    errors = {}
+    snow = {}
+
+    if request.method == 'GET':
+        return render_template('fridge.html', errors=errors)
+    
+    temp = request.form.get('temp')
+    if temp == "":
+        errors['temp'] = 'Ошибка: не задана температура'
+    else:
+        temp = int(temp)
+        if temp < -12:
+            errors['temp'] = 'Не удалось установить температуру — слишком низкое значение'
+        elif temp > -1:
+            errors['temp'] = 'Не удалось установить температуру — слишком высокое значение'
+        else:
+            if -12 <= temp <= -9:
+                errors['temp'] = f'Установлена температура: {temp}\u2103'
+                snow = ' \u2744\u2744\u2744'
+            elif -8 <= temp <= -5:
+                errors['temp'] = f'Установлена температура: {temp}\u2103'
+                snow = ' \u2744\u2744'
+            elif temp -4 <= temp <= -1:
+                errors['temp'] = f'Установлена температура: {temp}\u2103'
+                snow = ' \u2744'
+    return render_template('fridgetemp.html', errors=errors, temp=temp, snow=snow)

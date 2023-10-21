@@ -39,12 +39,6 @@
             <option value="child" {{ tickettype == 'child' and 'selected' }}>Детский</option>
             <option value="adult" {{ tickettype == 'adult' and 'selected' }}>Взрослый</option>
         </select><br><br>
-        <!-- <label>
-            <input type="radio" value="child" name="tickettype" checked {{ tickettype == 'child' and 'selected' }}>Детский
-        </label><br><br>
-        <label>
-            <input type="radio" value="adult" name="tickettype" checked {{ tickettype == 'child' and 'adult' }}>Взрослый
-        </label><br><br> -->
 
         <h3>Возраст</h3>
         <label>
@@ -77,30 +71,12 @@
             <option value="lowerside" {{ shelf == 'lowerside' and 'selected' }}>Нижняя боковая</option>
             <option value="upperside" {{ shelf == 'upperside' and 'selected' }}>Верхняя боковая</option>
         </select><br><br>
-        <!-- <label>
-            <input type="radio" value="lower" name="shelf" checked>Нижняя
-        </label><br><br>
-        <label>
-            <input type="radio" value="upper" name="shelf" checked>Верхняя
-        </label><br><br>
-        <label>
-            <input type="radio" value="lowerside" name="shelf" checked>Нижняя боковая
-        </label><br><br>
-        <label>
-            <input type="radio" value="upperside" name="shelf" checked>Верхняя боковая
-        </label><br><br> -->
 
         <h3>Багаж</h3>
         <select name="luggage">
             <option value="withluggage" {{ luggage == 'withluggage' and 'selected' }}>С багажом</option>
             <option value="withoutluggage" {{ luggage == 'withoutluggage' and 'selected' }}>Без багажа</option>
         </select><br><br>
-        <!-- <label>
-            <input type="radio" value="withluggage" name="luggage" checked {{ luggage == 'withluggage' and 'selected' }}>С багажом
-        </label><br><br>
-        <label>
-            <input type="radio" value="withoutluggage" name="luggage" checked {{ luggage == 'withoutluggage' and 'selected' }}>Без багажа
-        </label><br><br> -->
 
         <div>
             <button type="submit">Оформить билет</button>

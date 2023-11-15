@@ -79,7 +79,7 @@ def register():
     conn = dbConnect()
     cur = conn.cursor()
 
-    cur.execute("SELECT username FROM users WHERE username = %s", (username))
+    cur.execute("SELECT username FROM users WHERE username = %s", (username,))
 
     if cur.fetchone() is not None:
         errors = "Пользователь с данным именем уже существует"
@@ -111,7 +111,7 @@ def login():
     conn = dbConnect()
     cur = conn.cursor()
 
-    cur.execute("SELECT id, password FROM users WHERE username = %s", (username))
+    cur.execute("SELECT id, password FROM users WHERE username = %s", (username,))
 
     result = cur.fetchone()
 

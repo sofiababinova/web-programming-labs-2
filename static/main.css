@@ -32,7 +32,7 @@ footer {
 }
 
 #pusto {
-    height: 50px;
+    height: 70px;
 }
 
 #pusto2 {
@@ -94,6 +94,8 @@ footer {
     width: 90px;
     height: 25px;
     font-weight: bold;
+    position: relative;
+    top: 5px;
 }
 
 a.menu2 {
@@ -124,4 +126,90 @@ a.menu2:hover {
 
 #snow {
     color: blue;
+}
+
+#l5 {
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    width: 1512px;
+    height: 50px;
+    position: absolute;
+    left: 0px;
+    top: 79px;
+}
+
+#l51 {
+    color: rgb(49, 113, 222);
+    font-weight: bold;
+    font-size: 18pt;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+}
+
+#l52 {
+    color: rgb(49, 113, 222);
+    font-size: 13pt;
+    position: absolute;
+    left: 600px;
+    top: 15px;
+}
+
+#l53 {
+    color: rgb(49, 113, 222);
+    font-size: 13pt;
+    position: absolute;
+    left: 800px;
+    top: 15px;
+}
+
+#l54 {
+    color: rgb(49, 113, 222);
+    font-size: 13pt;
+    position: absolute;
+    left: 1100px;
+    top: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(49, 113, 222);
+}
+
+#l55 {
+    background-color: rgb(49, 113, 222);
+    color: white;
+    font-size: 13pt;
+    position: absolute;
+    left: 1200px;
+    top: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(49, 113, 222);
+}
+
+#l56 {
+    color: rgb(49, 113, 222);
+    font-size: 13pt;
+    position: absolute;
+    left: 1400px;
+    top: 15px;
+}
+
+a.lb52 {
+    text-decoration: none;
+    color: rgb(49, 113, 222);
+}
+
+a.lb53 {
+    text-decoration: none;
+    color: rgb(49, 113, 222);
+}
+
+a.lb54 {
+    text-decoration: none;
+    color: rgb(49, 113, 222);
+}
+
+a.lb55 {
+    text-decoration: none;
+    color: white;
 }

@@ -18,11 +18,11 @@
 <body id="{% block bodyid %}{% endblock %}">
     <header>
         WEB-программирование, часть 2. {{ self.lab() }}
+        <div id="menu1"><a href="http://127.0.0.1:5000/menu" class="menu2">Меню</a></div>
     </header>
 
     <main>
         <div id="pusto"></div>
-        <div id="menu1"><a href="http://127.0.0.1:5000/menu" class="menu2">Меню</a></div>
         {% block main %}{% endblock %}
     </main>
 

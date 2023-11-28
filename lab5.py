@@ -159,10 +159,10 @@ def createarticle():
             conn.commit()
 
             dbClose(cur, conn)
-
+            print(userID)
             return redirect(f"/lab5/articles/{new_article_id}")
         
-        return redirect("/lab5/login")
+    return redirect("/lab5/login")
     
 
 @lab5.route('/lab5/articles/<int:article_id>')
@@ -185,3 +185,27 @@ def getArticle(article_id):
         text = articleBody[1].splitlines()
 
         return render_template("article.html", article_text=text, article_title=articleBody[0], username=session.get("username"))
+    
+
+@lab5.route('/lab5/view_article/<int:user_id>')
+def viewArticle(user_id):
+    userID = session.get("id")
+    if userID is not None:
+        if userID != user_id:
+            return redirect ("/lab5/login")
+        
+        conn = dbConnect()
+        cur = conn.cursor()
+
+        cur.execute("SELECT title FROM articles WHERE user_id = %s", (user_id,))
+
+        articles = cur.fetchall()
+
+        dbClose(cur, conn)
+        return render_template("view_article.html", articles=articles, user_id=user_id, username=session.get('username'))
+    
+
+@lab5.route('/lab5/logout')
+def logout():
+    session.clear()
+    return redirect("/lab5/")

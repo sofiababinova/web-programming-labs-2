@@ -11,4 +11,7 @@ lab6 = Blueprint ("lab6", __name__)
 def main():
     my_users = users.query.all()
     print (my_users)
+
+    my_articles = articles.query.all()
+    print (my_articles)
     return "result in console!"

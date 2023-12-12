@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block lab %}Лабораторная работа 6{% endblock %}
+
+{% block main %}
+    <div id="l5">
+        <div id="l51">База знаний</div>
+        <div id="l52"><a href="/lab6/view_article/" class="lb52">Посмотреть заметки</a></div>
+        <div id="l53"><a href="/lab6/new_article" class="lb53">Создать заметку</a></div>
+        <div id="l54"><a href="/lab6/login" class="lb54">Логин</a></div>
+        <div id="l55"><a href="/lab6/register" class="lb55">Регистрация</a></div>
+        <div id="l57"><a href="/lab6/logout" class="lb57">Выйти</a></div>
+        <div id="l56">{{ username_form }}</div>
+    </div>
+{% endblock %}  
+
+<a href="/lab6/logout">Выйти</a></li>

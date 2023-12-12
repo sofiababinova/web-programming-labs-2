@@ -1,9 +1,9 @@
-from flask_sqlalchemy import SQLAlchemy 
+from flask import Flask
 from lab6 import lab6 
 from Db import db 
 from Db.models import users 
 from flask_login import LoginManager
-from flask import Flask
+
 
 
 app = Flask(__name__)
@@ -20,6 +20,15 @@ app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://{user_db}:{password}@{hos
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db.init_app(app)
+
+login_manager = LoginManager()
+
+login_manager.login_view = "lab6.login"
+login_manager.init_app(app)
+
+@login_manager.user_loader 
+def load_users(user_id):
+    return users.query.get(int(user_id))
 
 
 from lab1 import lab1

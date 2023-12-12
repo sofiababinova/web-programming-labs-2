@@ -151,7 +151,7 @@ a.menu2:hover {
     color: rgb(49, 113, 222);
     font-size: 13pt;
     position: absolute;
-    left: 600px;
+    left: 400px;
     top: 15px;
 }
 
@@ -159,7 +159,7 @@ a.menu2:hover {
     color: rgb(49, 113, 222);
     font-size: 13pt;
     position: absolute;
-    left: 800px;
+    left: 600px;
     top: 15px;
 }
 
@@ -167,7 +167,7 @@ a.menu2:hover {
     color: rgb(49, 113, 222);
     font-size: 13pt;
     position: absolute;
-    left: 1100px;
+    left: 900px;
     top: 10px;
     padding: 5px;
     border-radius: 5px;
@@ -179,7 +179,18 @@ a.menu2:hover {
     color: white;
     font-size: 13pt;
     position: absolute;
-    left: 1200px;
+    left: 1000px;
+    top: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(49, 113, 222);
+}
+
+#l57 {
+    color: rgb(49, 113, 222);
+    font-size: 13pt;
+    position: absolute;
+    left: 1150px;
     top: 10px;
     padding: 5px;
     border-radius: 5px;
@@ -212,4 +223,54 @@ a.lb54 {
 a.lb55 {
     text-decoration: none;
     color: white;
+}
+
+a.lb57 {
+    text-decoration: none;
+    color: rgb(49, 113, 222);
+}
+
+.center {
+    text-align: center;
+}
+
+.blok {
+    position: absolute;
+    left: 500px;
+    width: 500px;
+    height: 25px;
+}
+
+.blok1 {
+    position: absolute;
+    left: 500px;
+    width: 500px;
+    height: 250px;
+}
+
+.blok2 {
+    position: absolute;
+    left: 720px;
+    top: 470px;
+    width: 100px;
+    height: 25px;
+}
+
+.blok3 {
+    position: absolute;
+    left: 680px;
+    top: 240px;
+    width: 150px;
+    height: 25px;
+}
+
+.blok4 {
+    position: absolute;
+    left: 590px;
+}
+
+.errors1 {
+    color: red;
+    font-weight: bold;
+    text-align: center;
 }

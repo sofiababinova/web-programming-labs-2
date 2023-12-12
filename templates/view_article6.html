@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block lab %}Лабораторная работа 5{% endblock %}
+
+{% block main %}
+    <h1 class="center">Заметки {{ username }}:</h1>
+    <table class="blok4">
+        {% for article in articles %}
+            <tr>
+                <td><a href="/lab6/articles/{{ article.id }}">{{ article.title }}</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %} 

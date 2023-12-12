@@ -40,6 +40,9 @@ def menu():
             <li>
                 <a href="/lab5/" target="_blank">Лабораторная работа 5</a>
             </li>
+            <li>
+                <a href="/lab6/" target="_blank">Лабораторная работа 6</a>
+            </li>
         </ol>
         <footer>
             &copy; Бабинова Софья, ФБИ-14, 3 курс, 2023

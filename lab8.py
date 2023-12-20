@@ -14,9 +14,11 @@ courses = [
     {"name": "C#", "videos": 8}
 ]
 
+
 @lab8.route('/lab8/api/courses/', methods=['GET'])
 def get_courses():
     return courses
+
 
 @lab8.route('/lab8/api/courses/<int:course_num>', methods=['GET'])
 def get_course(course_num):
@@ -31,3 +33,12 @@ def del_course(course_num):
         return "Error 404: Курс не найден", 404
     del courses[course_num]
     return '', 204
+
+
+@lab8.route('/lab8/api/courses/<int:course_num>', methods=['PUT'])
+def put_course(course_num):
+    if course_num < 0 or course_num >= len(courses):
+        return "Error 404: Курс не найден", 404
+    course = request.get_json()
+    courses[course_num] = course
+    return courses[course_num]

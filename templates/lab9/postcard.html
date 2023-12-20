@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block lab %}Лабораторная работа 9{% endblock %}
+
+{% block main%}
+    <style>
+        .card {
+            font-size: 18px;
+        }
+
+        .zag {
+            font-size: 18px;
+            font-weight: 900;
+        }
+    </style>
+
+    {% if name1 and sex and name2 %}
+
+    <h1 class="zag">Поздравительная открытка!</h1>
+
+    <div class="card">
+        Имя получателя: {{ name1 }}
+    </div><br>
+
+    <div class="card">
+        Пол получателя: {{ sex }}
+    </div><br>
+
+    <div>
+        <img src="/static/NG.jpg" style="height: 400px;">
+    </div><br>
+
+    <div class="card">
+        {{ happy }}
+    </div><br>
+
+    <div class="card">
+        Имя отправителя: {{ name2 }}
+    </div><br>
+
+    {% else %}
+
+    <h1>Здравствуйте!</h1>
+    <h2>Заполните, пожалуйста, данные для отправки поздравительной открытки</h2>
+
+
+    <form>
+            <label>Имя получателя:</label>
+            <div>
+                <input type="text" placeholder="Ваше полное имя..." name="name1" value="{{ name or '' }}">
+                <span class="error">{{ errors.name }}</span>
+            </div><br>
+
+            <label>Имя отправителя:</label>
+            <div>
+                <input type="text" placeholder="Ваше полное имя..." name="name2" value="{{ name or '' }}">
+                <span class="error">{{ errors.name }}</span>
+            </div><br>
+
+            <label>Пол получателя:</label>
+            <div>
+                <select name="sex">
+                    <option value="man" {{ type_ticket == 'man' and 'selected' }}>Мужской</option>
+                    <option value="woman" {{ type_ticket =='woman' and 'selected' }}>Женский</option>
+                </select>
+            </div><br>
+
+            <div>
+                <button type="submit">Сформировать открытку</button>
+            </div>
+        </form>
+    {% endif %}
+{% endblock %}

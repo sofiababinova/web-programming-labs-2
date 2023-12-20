@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block lab %}Лабораторная работа 9{% endblock %}
+
+{% block main%}
+<style>
+    .image {
+        width: 1000px;
+        height: 600px;
+        top: 200px;
+        left: 250px;
+        position: absolute;
+    }
+
+    .error {
+        font-size: 20px;
+        color: rgb(149, 12, 12);
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .link {
+        font-size: 18px;
+        color: rgb(149, 12, 12);
+    }
+</style>
+
+    <div>
+        <div class="error">Ошибка 404 - Страница не найдена</div>
+        <img src="/static/HG.jpg" class="image"><br>
+        <a href="/lab9/index/" class="link">Главная страница</a>
+    </div>
+{% endblock %}
